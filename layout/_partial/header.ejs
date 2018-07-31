@@ -4,11 +4,12 @@
         let title = theme.header.title;
         let bg = theme.header.background;
         if (page.category) {
-            title = page.category;
-            bg = theme.category_bg[title];
+            title = theme.category_bg[page.category].desc;
+            bg = theme.category_bg[page.category].bg;
         } else if (page.categories) {
-            title = page.categories.data[0].name;
-            bg = theme.category_bg[title];
+            let cate = page.categories.data[0].name;
+            title = theme.category_bg[cate].desc;
+            bg = theme.category_bg[cate].bg;
         }
     %>
     <img src="<% if (bg) { %> <%= bg %> <% } else { %> <%- url_for('images/background.png') %> <% } %>" alt="头部背景图片">
