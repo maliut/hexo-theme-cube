@@ -15,6 +15,11 @@ toc:
 # `background: background.png` refers to the path "source/images/background.png"
 background: http://wx1.sinaimg.cn/large/005Xteq2gy1fmqn8a2yaej31kw0wehdu.jpg
 
+# background for category
+category_bg:
+  lalala: http://wx2.sinaimg.cn/large/c5cec604gy1fsj5afkxuzj20zk0npqbo.jpg
+  revere: http://wx4.sinaimg.cn/large/c5cec604gy1fsj5aig1gjj20zk0npwqm.jpg
+
 
 # the background image width and height (you can see your image file to get them)
 width: 2460

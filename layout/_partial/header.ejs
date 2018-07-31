@@ -1,8 +1,20 @@
 <header class="cube-header" id="cube-header">
-    <img src="<% if(theme.header.background) { %> <%= theme.header.background %> <% } else { %> <%- url_for('images/background.png') %> <% } %>" alt="头部背景图片">
-    <% if (theme.header.title) { %>
+    <%
+        // 如果是 分类/文章 页面，展示分类名称和分类背景
+        let title = theme.header.title;
+        let bg = theme.header.background;
+        if (page.category) {
+            title = page.category;
+            bg = theme.category_bg[title];
+        } else if (page.categories) {
+            title = page.categories.data[0].name;
+            bg = theme.category_bg[title];
+        }
+    %>
+    <img src="<% if (bg) { %> <%= bg %> <% } else { %> <%- url_for('images/background.png') %> <% } %>" alt="头部背景图片">
+    <% if (title) { %>
     <div class="cube-type">
-        <span class="cube-typed-title"><%= theme.header.title %></span>
+        <span class="cube-typed-title"><%= title %></span>
         <span class="cube-typed-cursor">|</span>
     </div>
     <% } %>
@@ -17,7 +29,7 @@
     <!-- TODO 增加全局背景图的样式 -->
     <style>
         header.cube-background.cube-full-background {
-            background-image: url('<%= isUrl ? theme.background : prefix + theme.background %>')
+            background-image: url('<%= isUrl ? bg : prefix + bg %>')
         }
     </style>
     <header class="cube-background cube-full-background">
@@ -37,7 +49,7 @@
             -webkit-filter: blur(<%= blur %>px);
         <% } %>
             z-index: -1;
-            background-image: url('<%= isUrl ? theme.background : prefix + theme.background %>');
+            background-image: url('<%= isUrl ? bg : prefix + bg %>');
             background-repeat: no-repeat;
             background-position: center <%= `${-position + 44}px` %>;
             background-size: cover;
@@ -46,14 +58,14 @@
 
         header.cube-background.cube-header-background {
             visibility: hidden;
-            background-image: url('<%= isUrl ? theme.background : prefix + theme.background %>');
+            background-image: url('<%= isUrl ? bg : prefix + bg %>');
             background-position: center <%= (position !== 0) ? `${-position}px` : 0 %>;
         }
     </style>
     <header class="cube-background cube-header-background">
-        <% if (theme.header.title) { %>
+        <% if (title) { %>
         <div class="cube-type">
-            <span class="cube-typed-title"><%= theme.header.title %></span>
+            <span class="cube-typed-title"><%= title %></span>
             <span class="cube-typed-cursor">|</span>
         </div>
         <% } %>
