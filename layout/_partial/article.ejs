@@ -1,4 +1,4 @@
-<div class="cube-article">
+﻿<div class="cube-article">
     <%- partial('post/title', { item: item }) %>
     <% if (!isPage) { %>
     <div class="cube-article-header">
@@ -20,6 +20,21 @@
     <% } %>
     <div class="cube-article-content cube-markdown">
         <%- partial('post/gallery', { item: item }) %>
+	<!-- Table of Contents -->
+
+	<% if (item.toc){ %>
+
+	<div id="toc" class="toc-article">
+
+	<strong class="toc-title">文章目录</strong>
+
+	<%- toc(item.content,{list_number: false}) %>
+
+	</div>
+
+	<% } %>
+
+
         <%- item.content %>
     </div>
 </div>

@@ -1,4 +1,4 @@
-categories: 分类
+﻿categories: 分类
 search: 搜索
 tags: 标签
 tagcloud: 标签云
@@ -10,7 +10,7 @@ tag: 标签
 category: 分类
 open_music_lrc: 开启歌词
 close_music_lrc: 关闭歌词
-scroll_to_top: 回到顶部
+scroll_to_top: contact author：fin@treeholeof.me
 archive_a: 归档
 archive_b: "归档: %s"
 page: "第 %d 页"

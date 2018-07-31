@@ -1,33 +1,34 @@
-theme: cube
+﻿theme: cube
 
 # background display for mobile, not for pc
 header:
-  background: http://cube-1252774894.cosgz.myqcloud.com/background.png
+  background: http://wx1.sinaimg.cn/large/005Xteq2gy1fmqn8a2yaej31kw0wehdu.jpg
   # both pc and mobile required title(make it the same as your hexo site _config.yml's title)
-  title: senrenbankaの部落格
+  title: Thought Fragment in Fin
 
+toc:
+	enable: true
+	number: false
 
 # background display for pc
 # you can use url or path relative
 # `background: background.png` refers to the path "source/images/background.png"
-background: http://cube-1252774894.cosgz.myqcloud.com/background.png
+background: http://wx1.sinaimg.cn/large/005Xteq2gy1fmqn8a2yaej31kw0wehdu.jpg
 
 
 # the background image width and height (you can see your image file to get them)
-width: 2000
-height: 1414
-
+width: 2460
+height: 1400
 
 # this variable is used to locate your background
 # for example, if you want to locate display your background from top
 # you just need to type it: position: 0
-position: 400
+position: 225
 
 
 # this variable is used to make the background header being fuzzy
 # if your do not need the filter blur on the top, make it empty, it means that: `blur: `
 blur: 5
-
 
 # yeah, it is just to make your avatar rounded(true) or not(false)
 avatar: true
@@ -50,9 +51,9 @@ menu:
     icon: tags
     url: tags
   # about-me
-  - title: 关于我
+  - title: 关于笔者
     icon: about
-    url: about-me
+    url: about_me
 
 sidebar:
   links:
@@ -70,15 +71,16 @@ sidebar:
       url: https://toutiao.io/u/148070
       icon: http://cube-1252774894.cosgz.myqcloud.com/links/开发者头条.png
   friend_links:
-    - title: 罗大佬
-      url: https://blog.micblo.com/
+    - title: BUWAILI
+      url: https://doubilee.com/
       # icon only url
-      icon: http://cube-1252774894.cosgz.myqcloud.com/friend_links/micblo.png
-    - title: DIYgod
-      url: https://www.anotherhome.net/
-      icon: http://cube-1252774894.cosgz.myqcloud.com/friend_links/DIYgod.jpg
-    - title: 咪西西の部落格
-      url: https://aonosora.com/
+      icon: http://wx4.sinaimg.cn/mw690/005Xteq2gy1fmqo6rvg5pj30bp0bltfj.jpg
+    - title: Mの综合研究
+      url: https://maliut.space/
+      icon: http://wx3.sinaimg.cn/mw690/005Xteq2gy1fmqo7t1cksj30b10azq2y.jpg
+    - title: Netting Sisyphus
+      url: https://zhangtianxing.com/
+      icon: http://wx3.sinaimg.cn/mw690/005Xteq2gy1fmqo8drztlj30c60c6gly.jpg
 
 # only path, refer to source/images
 friend_links: friend_links.jpg
@@ -86,11 +88,9 @@ friend_links: friend_links.jpg
 widgets:
 - search
 - author
-- music
 - recent_posts
 - categories
 - tagcloud
-- links
 - friend_links
 
 # when you want to use the search, firstly make the `search: true`,
@@ -160,3 +160,13 @@ comment_setting:
 analytics:
   baidu:
   google:
+
+# Automatically Excerpt. Not recommand.
+
+# Please use <!-- more --> in the post to control excerpt accurately.
+
+auto_excerpt:
+
+  enable: false
+
+  length: 150

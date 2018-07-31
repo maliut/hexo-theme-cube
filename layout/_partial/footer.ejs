@@ -1,7 +1,7 @@
-<% if (config.author) { %>
-© 2017 <%= config.author %>
+﻿<% if (config.author) { %>
+© <%- date(Date.now(), 'YYYY') %> <%= config.author %>
 <% } else { %>
-© 2017
+© <%- date(Date.now(), 'YYYY') %>
 <% } %>
 <br>
 Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
